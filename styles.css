@@ -1,0 +1,387 @@
+header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+.layar-dalam {
+  width: 1000px;
+  margin: auto;
+}
+Video {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Style konten di atas video */
+@font-face {    
+  font-family: "wild";
+  src: url("font/wild.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {    
+  font-family: "bergstena";
+  src: url("font/bergstena.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {    
+  font-family: "designer";
+  src: url("font/designer.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-weight: lighter;
+  font-size: x-large;
+  color: white;
+  text-align: center;
+}
+
+header .intro {
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: 20%;
+  font-family: "wild";
+  font-size: 50px;
+}
+header .intro h3 {
+  font-size: 150px;
+  margin: 0;
+  padding: 0;
+}
+
+.love-icon{
+  width: 100px;
+  height: auto;
+  vertical-align: super; 
+  margin-left: 10px;
+}
+
+.mute-button {
+    position: absolute;
+    bottom: -210px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.mute-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+section {
+  padding: 50px 0px 50px 0px;
+}
+section h3 {
+  font-size: 30px;
+}
+section h3::after {
+  content: "";
+  border-bottom: 5px solid #c86b85;
+  width: 52px;
+  display: block;
+  margin: 20px auto;
+}
+#aboutus,
+#team,
+#blog {
+  text-align: center;
+  background-color: #fff; /* tambahkan ini biar background putih */
+  color: #333; /* biar teks kontras */
+  position: relative;
+  font-family: "wild";
+  z-index: 2;
+}
+section p.ringkasan {
+  font-style: italic;
+  font-family: 'designer';
+  font-size: 18px;
+  color: #ababab;
+}
+section .konten-isi p {
+  font-style: normal;
+}
+
+nav.putih{
+    background-color: #fff;
+}
+nav.putih .tombol-menu .garis {
+    background-color: #333;
+}
+nav.putih ul li a {
+    color: #333;
+}
+
+section.abuabu {
+  position: relative;
+  background-color: #f5f6f6;
+  color: #333;
+  z-index: 2;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 2;
+}
+.content h6 {
+  margin: 0px;
+  margin-top: 20px;
+  padding: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'designer';
+}
+.content img {
+  width: 40%;
+  height: auto;
+  border-radius: 8px;
+}
+.content div {
+  text-align: center;
+  width: 40%;
+}
+
+section#gallery{
+  position: relative;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  overflow: hidden;
+  padding: 10px 0px 10px 0px;
+  z-index: 2;
+}
+section#gallery div{
+  padding: 10px;
+}
+section#gallery div img{
+  height: 120px;
+  border-radius: 5px;
+}
+section#gallery div img:hover{
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+}
+
+section.quote{
+  background:url('aset/6.jpg') no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  font-size: 70px;
+  font-style: italic;
+  padding: 100px;
+  font-family: "bergstena";
+}
+section.quote .layar-dalam p{
+  display: inline;
+  padding: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+#lovebutton {
+  text-align: center;
+  background-color: #fff;   /* putih seperti about us */
+  color: #333;              /* teks kontras */
+  padding: 50px 0;          /* ruang atas bawah */
+  position: relative;
+  z-index: 2;
+}
+
+#lovebutton #tombol {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  font-family: "dancing script", cursive;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+#lovebutton #tombol:hover {
+  background-color: #e0569b;
+}
+
+@media (max-width: 1024px) {
+  .layar-dalam {
+    width: 90%;
+  }
+  header .intro h3 {
+    font-size: 100px;
+  }
+  .love-icon {
+    width: 60px;
+  }
+  section#gallery div img {
+    height: 100px;
+  }
+}
+
+/* HP besar */
+@media (max-width: 768px) {
+  header .intro {
+    top: 15%;
+    font-size: 30px;
+  }
+  header .intro h3 {
+    font-size: 70px;
+  }
+  .love-icon {
+    width: 40px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content div {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  section#gallery {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  section#gallery div img {
+    height: 90px;
+  }
+
+  section.quote {
+    font-size: 40px;
+    padding: 60px 20px;
+  }
+
+  #lovebutton #tombol {
+    font-size: 20px;
+    padding: 12px 30px;
+  }
+}
+
+/* HP kecil */
+@media (max-width: 480px) {
+  header .intro h3 {
+    font-size: 50px;
+  }
+  .love-icon {
+    width: 30px;
+  }
+  section#gallery div img {
+    height: 70px;
+  }
+  section.quote {
+    font-size: 25px;
+    padding: 40px 15px;
+  }
+  #lovebutton #tombol {
+    font-size: 18px;
+    padding: 10px 25px;
+  }
+}
+
+/* DNASUDBUASUSAYYDVSDYAV */
+
+/* Responsif tablet/HP */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;     /* ubah dari row ke column */
+    align-items: center;
+  }
+  .content div {
+    width: 90%;                 /* biar konten full hampir 1 layar */
+    margin-bottom: 20px;
+  }
+  .content p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+  }
+}
+
+/* Responsif HP kecil */
+@media (max-width: 480px) {
+  .content p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; 
+    align-items: center;
+  }
+  .content div {
+    width: 90%;   
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .content img {
+    width: 100%;   
+    max-width: 250px; 
+    height: auto;
+  }
+  .content p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .content img {
+    max-width: 180px;
+  }
+  .content p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
