@@ -16,6 +16,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+const music = document.getElementById("bgMusic");
+const muteBtn = document.getElementById("muteButton");
+
+// play + unmute saat user klik dimana saja
+document.addEventListener("click", () => {
+    music.muted = false;
+    music.play();
+}, { once: true });
+
+// tombol mute
+muteBtn.addEventListener("click", () => {
+    if (music.muted) {
+        music.muted = false;
+        muteBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+    } else {
+        music.muted = true;
+        muteBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+    }
+});
+
 document.getElementById("tombol").addEventListener("click", function() {
     var nomor = "6289518139718";
     var pesan = " ";
